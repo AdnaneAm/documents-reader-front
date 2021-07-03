@@ -10,7 +10,7 @@ export const getters = {
     return state.documents;
   },
   document:(state) => (id) =>{
-    return state.documents.filter(document => document._id == id)[0];
+    return state.documents.filter(document => document.id == id)[0];
   }
 }
 export const mutations = {
@@ -21,11 +21,11 @@ export const mutations = {
     state.documents.push(payload);
   },
   setDocument(state,payload){
-    const index = state.documents.findIndex(document => document._id == payload.id);
+    const index = state.documents.findIndex(document => document.id == payload.id);
     state.documents[index] = payload
   },
   deleteDocument(state,id){
-    state.documents = state.documents.filter(document => document._id != id)
+    state.documents = state.documents.filter(document => document.id != id)
   }
 };
 
@@ -55,12 +55,12 @@ export const actions = {
       commit('pushDocument',document);
     })
   },
-  async setDocument({commit},{type,_id}){
+  async setDocument({commit},{type,id}){
     const payload = {
       type:type
     }
     console.log("new type : ",payload.type);
-    return await axios.patch(process.env.VUE_APP_API_BASE_URL+`documents/${_id}`,payload,{
+    return await axios.patch(process.env.VUE_APP_API_BASE_URL+`documents/${id}`,payload,{
       headers:authHeader()
     }).then(() => {
       commit('setDocument',document);

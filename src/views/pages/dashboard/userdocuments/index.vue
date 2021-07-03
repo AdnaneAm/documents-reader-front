@@ -18,6 +18,7 @@
     data() {
       return {
         title: 'pages.documents.title',
+        userID: this.$route.params.id
       }
     },
     computed:{
@@ -38,22 +39,24 @@
           { key: "type", sortable: true, label:this.$t('tables.documents.type')},
           { key: "status", sortable: true, label:this.$t('tables.documents.status')},
           { key: "created", sortable: true, label:this.$t('tables.documents.date')},
+          { key: "approve"},
           { key: "action" }
         ]
       },
       options(){
         return {
-          editRouteName:'edit-document',
-          deleteActionName:'documents/deleteDocumentByID',
-          title:this.$t('tables.documents.title')
+          editRouteName:'edit-user-document',
+          deleteActionName:'users/deleteUserDocument',
+          title:this.$t('tables.documents.title'),
+          userID:this.userID,
         }
       },
       documents(){
-        return this.$store.getters['documents/documents']
+        return this.$store.getters['users/userDocuments'](this.userID)
       }
     },
     created(){
-      this.$store.dispatch('documents/getDocuments');
+      this.$store.dispatch('users/getUserDocuments',this.userID);
     }
   }
 </script>

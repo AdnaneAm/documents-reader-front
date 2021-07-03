@@ -40,27 +40,67 @@
           @filtered="onFiltered"
         > 
           <template v-slot:cell(action)="row">
-            <a 
-            class="mr-3 text-primary"
+            <router-link
+              v-if="userRole == 'admin' && row.item.email"
+              :to="{name:'user-documents',params:{id:row.item.id}}"
+              class="text-primary mr-2"
+              v-b-tooltip.hover
+              data-toggle="tooltip"
+              title="Show documents"
+            >
+              <i class="ri-attachment-line font-size-18"></i>
+            </router-link>
+            <a
+            v-if="row.item.path" 
+            class="mr-2 text-primary"
             target="_blank" 
+            v-b-tooltip.hover
+            data-toggle="tooltip"
+            title="Show"
             :href="`http://localhost:3000/${row.item.path.substr(7)}`">
-              <i class="mdi mdi-eye font-size-18"></i>
+              <i class="ri-eye-line font-size-18"></i>
             </a>
             <router-link
-              :to="{name:options.editRouteName,params:{id:row.item._id}}"
-              class="mr-3 text-primary"
+              :to="{name:options.editRouteName,params:{id:row.item.id}}"
+              class="mr-2 text-secondary"
               v-b-tooltip.hover
               data-toggle="tooltip"
               title="Edit"
             >
-            <i class="mdi mdi-pencil font-size-18"></i>
+            <i class="ri-edit-line font-size-18"></i>
             </router-link>
-            <a @click="deleteRow(row.item._id)" href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
-              <i class="mdi mdi-trash-can font-size-18"></i>
+            <a @click="deleteRow(row.item.id)" href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
+              <i class="ri-delete-bin-line font-size-18"></i>
             </a>
           </template>
-          <template #cell(createDate)="data">
-            {{data.value.substr(0,10)}}
+          <template #cell(created)="data">
+            {{ data.value ? data.value.substr(0,10) : ''}}
+          </template>
+          <template #cell(status)="data">
+            {{ $t(`forms.documents.statusOptions.${data.value}`) }}
+          </template>
+          <template #cell(role)="data">
+            {{ $t(`forms.users.roleOptions.${data.value}`) }}
+          </template>
+          <template #cell(approve)="data">
+            <a 
+              @click.prevent="changeStatus({status:'approved',documentID:data.item.id})"
+              class="mr-2 text-success"
+              v-b-tooltip.hover
+              data-toggle="tooltip"
+              title="Approve"
+            >
+              <i class="ri-check-line font-size-18"></i>
+            </a>
+            <a 
+              @click.prevent="changeStatus({status:'declined',documentID:data.item.id})"
+              class="mr-2 text-danger"
+              v-b-tooltip.hover
+              data-toggle="tooltip"
+              title="Decline"
+            >      
+              <i class="ri-close-fill font-size-18"></i>   
+            </a>
           </template>
         </b-table>
       </div>
@@ -137,7 +177,19 @@
      * @brief Delete farmer when delete button is clicked 
      */
     deleteRow(rowId){
-      this.$store.dispatch(this.options.deleteActionName,rowId);
+      if(this.options.userID){
+        this.$store.dispatch(this.options.deleteActionName,{
+          userID:this.options.userID,
+          documentID: rowId
+        });
+      }
+      else{
+        this.$store.dispatch(this.options.deleteActionName,rowId);
+      }
+    },
+    changeStatus(payload){
+      payload.userID = this.options.userID;
+      this.$store.dispatch('users/updateUserDocument', payload);
     }
   }
   }

@@ -6,24 +6,44 @@ export const menuItems = [
     },
     {
         id: 2,
-        label: 'menuitems.dashboard.text',
+        label:"menuitems.dashboard.text",
+        link:"/",
         icon: 'ri-dashboard-line',
-        badge: {
-            variant: "success",
-            text: "menuitems.dashboard.badge"
-        },
-        link: '/'
     },
     {
-        id: 4,
-        label: 'menuitems.documents.list',
-        icon: 'ri-dashboard-line',
-        link: '/documents/',
+        id: 3,
+        label: 'menuitems.documents.text',
+        icon: 'ri-attachment-line',
+        subItems:[
+            {
+                id: 4,
+                label: 'menuitems.documents.list',
+                icon: 'ri-file-list-line',
+                link: '/documents/',
+            },
+            {
+                id: 5,
+                label: 'menuitems.documents.create',
+                icon: 'ri-add-line',
+                link: '/documents/create',
+            }
+        ]
     },
     {
-        id: 5,
-        label: 'menuitems.documents.create',
-        icon: 'ri-dashboard-line',
-        link: '/documents/create',
+        id:6,
+        label:'menuitems.users.text',
+        icon: 'ri-group-line',
+        subItems:[
+            {
+                id:7,
+                label:'menuitems.users.list',
+                link:'/users/'
+            },
+            {
+                id:8,
+                label:'menuitems.users.create',
+                link:'/users/create'
+            }
+        ]
     }
 ]

@@ -106,5 +106,45 @@ export default [
             authRequired: true,
         },
         component: () => import('../views/pages/dashboard/documents/edit'),
+    },
+    {
+        path: '/users/',
+        name: 'users',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/users/index'),
+    },
+    {
+        path: '/users/create',
+        name: 'create-user',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/users/create'),
+    },
+    {
+        path: '/users/:id',
+        name: 'user',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/users/show'),
+    },
+    {
+        path:'/users/:id/edit',
+        name:'edit-user',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/users/edit'),
+    },
+    {
+        path:'/users/:id/documents',
+        name:'user-documents',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/userdocuments/index'),
     }
 ]

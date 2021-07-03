@@ -102,6 +102,11 @@
             "list":"Liste des documents",
             "create":"Ajouter un document"
         },
+        "users":{
+            "text":"Utilisateurs",
+            "list":"Liste des utilisateurs",
+            "create":"Ajouter un utilisateur"
+        },
         "layouts": {
             "text": "Disposition",
             "list": {
@@ -131,6 +136,18 @@
             "title":"Se connecter",
             "description":"Pour se connceter, Veuillez entrer votre cordonnées et appuyer sur Connexion",
             "registermessage":"Vous n'avez pas crée un compte ? "
+        },
+        "users":{
+            "title":"Utilisateurs"
+        },
+        "adduser":{
+            "title":"Ajouter un utilisateur",
+            "description":"Pour ajouter un nouveau utilisateur veuillez remplir les champs ci-dessous",
+            "button":"Créer l'utilisateur"
+        },
+        "edituser":{
+            "title":"Modifier un utilisateur",
+            "description":"Pour modifier les informations de l'utilisateur veuillez remplir les champs ci-dessous"
         }
     },
     "tables": {
@@ -140,6 +157,12 @@
             "type":"Type",
             "status":"Statut",
             "date":"Ajouté le"
+        },
+        "users":{
+            "name":"Nom et prénom",
+            "email":"Email",
+            "role":"Role",
+            "created":"Enregistré le"
         }
     },
     "forms": {
@@ -170,6 +193,16 @@
                 "placeholder":"Veuillez entrer votre mot de passe"
             },
             "button":"Connexion"
+        },
+        "users":{
+            "name":"Nom et prénom",
+            "email":"Email",
+            "password":"Mot de passe",
+            "role":"Role",
+            "roleOptions":{
+                "user":"Utilisateur",
+                "admin":"Administrateur"
+            }
         }
     }
 }
