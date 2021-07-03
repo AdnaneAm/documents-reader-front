@@ -1,5 +1,4 @@
-# Nazox- Vuejs admin template
-
+# Document reader front - A Vue.js consumer for documents reader API
 ## Project setup
 ```
 yarn install
