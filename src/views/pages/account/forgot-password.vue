@@ -128,8 +128,8 @@ export default {
                           >Log in</router-link>
                         </p>
                         <p>
-                          © 2020 Nazox. Crafted with
-                          <i class="mdi mdi-heart text-danger"></i> by Themesdesign
+                          © 2021 Documents reader. Crafted with
+                          <i class="mdi mdi-heart text-danger"></i> by KARIM LAARICH
                         </p>
                       </div>
                     </div>

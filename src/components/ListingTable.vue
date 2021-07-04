@@ -68,7 +68,7 @@
             v-b-tooltip.hover
             data-toggle="tooltip"
             :title="$t('tables.documents.show')"
-            :href="`http://localhost:3000/${row.item.path.substr(7)}`">
+            :href="`${apiUrl}${row.item.path.substr(7)}`">
               <i class="ri-eye-line font-size-18"></i>
             </a>
             <router-link
@@ -167,6 +167,7 @@
       sortDesc: false,
       userRole: 'user',
       resultIsLoading: false,
+      apiUrl: process.env.VUE_APP_API_BASE_URL,
     };
   },
   computed: {

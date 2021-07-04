@@ -14,24 +14,9 @@ export default {
           flag: require("@/assets/images/flags/french.jpg"),
           language: "fr",
           title: "French"
-        },
-        {
-          flag: require("@/assets/images/flags/spain.jpg"),
-          language: "es",
-          title: "spanish"
-        },
-        {
-          flag: require("@/assets/images/flags/chaina.png"),
-          language: "zh",
-          title: "Chinese"
-        },
-        {
-          flag: require("@/assets/images/flags/arabic.png"),
-          language: "ar",
-          title: "Arabic"
         }
       ],
-      current_language: "en"
+      current_language: "fr"
     };
   },
   methods: {
@@ -118,7 +103,7 @@ export default {
       <div class="d-flex">
         <b-dropdown variant="white" right toggle-class="header-item">
           <template v-slot:button-content>
-            <img class src="@/assets/images/flags/us.jpg" alt="Header Language" height="16" />
+            <img class src="@/assets/images/flags/french.jpg" alt="Header Language" height="16" />
           </template>
           <b-dropdown-item
             class="notify-item"
