@@ -1,4 +1,7 @@
-export const menuItems = [
+import store from '../state/modules'
+const role = store.auth.state.currentUser.user.role;
+console.log(role);
+let menuItems = [
     {
         id: 1,
         label: "menuitems.menu.text",
@@ -28,22 +31,28 @@ export const menuItems = [
                 link: '/documents/create',
             }
         ]
-    },
-    {
-        id:6,
-        label:'menuitems.users.text',
-        icon: 'ri-group-line',
-        subItems:[
-            {
-                id:7,
-                label:'menuitems.users.list',
-                link:'/users/'
-            },
-            {
-                id:8,
-                label:'menuitems.users.create',
-                link:'/users/create'
-            }
-        ]
     }
 ]
+if(role == 'admin'){
+    const adminItems = [
+        {
+            id:6,
+            label:'menuitems.users.text',
+            icon: 'ri-group-line',
+            subItems:[
+                {
+                    id:7,
+                    label:'menuitems.users.list',
+                    link:'/users/'
+                },
+                {
+                    id:8,
+                    label:'menuitems.users.create',
+                    link:'/users/create'
+                }
+            ]
+        }
+    ]
+    menuItems = menuItems.concat(adminItems)
+}
+export {menuItems};

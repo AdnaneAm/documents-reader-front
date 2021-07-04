@@ -146,19 +146,6 @@ export default {
             <i class="ri-user-line align-middle mr-1"></i>
             {{ $t('navbar.dropdown.kevin.list.profile') }}
           </a>
-          <a class="dropdown-item" href="#">
-            <i class="ri-wallet-2-line align-middle mr-1"></i>
-            {{ $t('navbar.dropdown.kevin.list.mywallet') }}
-          </a>
-          <a class="dropdown-item d-block" href="#">
-            <span class="badge badge-success float-right mt-1">11</span>
-            <i class="ri-settings-2-line align-middle mr-1"></i>
-            {{ $t('navbar.dropdown.kevin.list.settings') }}
-          </a>
-          <a class="dropdown-item" href="#">
-            <i class="ri-lock-unlock-line align-middle mr-1"></i>
-            {{ $t('navbar.dropdown.kevin.list.lockscreen') }}
-          </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item text-danger" @click="logOut">
             <i class="ri-shut-down-line align-middle mr-1 text-danger"></i>

@@ -1,256 +1,236 @@
 {
   "navbar": {
-    "search": {
-      "text": "Search..."
-    },
-    "dropdown": {
-      "megamenu": {
-        "text": "Mega Menu",
-        "uicontent": {
-          "title": "UI Components",
-          "list": {
-            "lightbox": "Lightbox",
-            "rangeslider": "Range Slider",
-            "sweetalert": "Sweet Alert",
-            "rating": "Rating",
-            "forms": "Forms",
-            "tables": "Tables",
-            "charts": "Charts"
-          }
-        },
-        "application": {
-          "title": "Applications",
-          "list": {
-            "ecommerce": "Ecommece",
-            "calendar": "Calendar",
-            "email": "Email",
-            "projects": "Projects",
-            "tasks": "Tasks",
-            "contacts": "Contacts"
-          }
-        },
-        "extrapages": {
-          "title": "Extra Pages",
-          "list": {
-            "lightsidebar": "Light Sidebar",
-            "compactsidebar": "Compact Sidebar",
-            "horizontallayout": "Horizontal Layout",
-            "maintenance": "Maintenance",
-            "comingsoon": "Coming Soon",
-            "timeline": "Timeline",
-            "faqs": "FAQs"
-          }
-        }
+      "search": {
+          "text": "Search..."
       },
-      "site": {
-        "list": {
-          "github": "GitHub",
-          "bitbucket": "Bitbucket",
-          "dribbble": "Dribbble",
-          "dropbox": "Dropbox",
-          "mailchimp": "Mail Chimp",
-          "slack": "Slack"
-        }
-      },
-      "notification": {
-        "text": "Notifications",
-        "subtext": "View All",
-        "order": {
-          "title": "Your order is placed",
-          "text": "If several languages coalesce the grammar",
-          "time": "3 min ago"
-        },
-        "james": {
-          "title": "James Lemire",
-          "text": "It will seem like simplified English.",
-          "time": "1 hours ago"
-        },
-        "item": {
-          "title": "Your item is shipped",
-          "text": "If several languages coalesce the grammar",
-          "time": "3 min ago"
-        },
-        "salena": {
-          "title": "Salena Layfield",
-          "text": "As a skeptical Cambridge friend of mine occidental.",
-          "time": "1 hours ago"
-        },
-        "button": "Load More.."
-      },
-      "kevin": {
-        "text": "Kevin",
-        "list": {
-          "profile": "Profile",
-          "mywallet": "My Wallet",
-          "settings": "Settings",
-          "lockscreen": "Lock screen",
-          "logout": "Logout"
-        }
+      "dropdown": {
+          "megamenu": {
+              "text": "Mega Menu",
+              "uicontent": {
+                  "title": " User interface components ",
+                  "list": {
+                      "lightbox": " Light box",
+                      "rangeslider": "Range slider ",
+                      "sweetalert": "Sweet Alert",
+                      "rating": "Rating",
+                      "forms": "Forms",
+                      "tables": "Tables",
+                      "charts": "Charts"
+                  }
+              },
+              "application": {
+                  "title": "Applications",
+                  "list": {
+                      "ecommerce": "Ecommerce",
+                      "calendar": "Calendar",
+                      "email": "Email",
+                      "projects": "Projects",
+                      "tasks": "Tasks",
+                      "contacts": "Contacts"
+                  }
+              },
+              "extrapages": {
+                  "title": "Additional Pages",
+                  "list": {
+                      "lightsidebar": "Light side bar",
+                      "compactsidebar": "Compact side bar",
+                      "horizontallayout": "Horizontal layout",
+                      "maintenance": "Maintenance",
+                      "comingsoon": "Comingsoon",
+                      "timeline": "Timeline",
+                      "faqs": "FAQ"
+                  }
+              }
+          },
+          "site": {
+              "list": {
+                  "github": "GitHub",
+                  "bitbucket": "Bitbucket",
+                  "dribbble": "Dribble",
+                  "dropbox": "Dropbox",
+                  "mailchimp": "Mail Chimp",
+                  "slack": "Slack"
+              }
+          },
+          "notification": {
+              "text": "Notifications",
+              "subtext": "Show everything ",
+              "order": {
+                  "title": "Your order has been placed ",
+                  "text": "If several languages ​​merge the grammar",
+                  "time": "3 minutes ago"
+              },
+              "james": {
+                  "title": "James Lemire",
+                  "text": "It will seem like simplified English.",
+                  "time": "1 hour ago"
+              },
+              "item": {
+                  "title": "Your item is shipped ",
+                  "text": "If several languages merge the grammar",
+                  "time": "3 minutes ago"
+              },
+              "salena": {
+                  "title": "Salena Layfield",
+                  "text": "As a skeptical Cambridge friend of mine occidental.",
+                  "time": "1 hour ago"
+              },
+              "button": "Load more .."
+          },
+          "kevin": {
+              "text": "Kevin",
+              "list": {
+                  "profile": "Profil",
+                  "mywallet": "my wallet",
+                  "settings": "Settings",
+                  "lockscreen": "Lock screen",
+                  "logout": "Logout"
+              }
+          }
       }
-    }
   },
   "menuitems": {
-    "menu": {
-      "text": "Menu"
-    },
-    "dashboard": {
-      "text": "Dashboard",
-      "badge": "3"
-    },
-    "layouts": {
-      "text": "Layouts",
-      "list": {
-        "horizontal": "Horizontal",
-        "lightsidebar": "Light Sidebar",
-        "compactsidebar": "Compact Sidebar",
-        "iconsidebar": "Icons Sidebar",
-        "boxed": "Boxed Layout",
-        "vertical": "Vertical",
-        "lighttopbar": "Light Topbar"
-      }
-    },
-    "apps": {
-      "text": "Apps"
-    },
-    "calendar": {
-      "text": "Calendar"
-    },
-    "chat": {
-      "text": "Chat",
-      "badge": "New"
-    },
-    "ecommerce": {
-      "text": "Ecommerce",
-      "list": {
-        "products": "Products",
-        "productdetail": "Product Detail",
-        "orders": "Orders",
-        "customers": "Customers",
-        "cart": "Cart",
-        "checkout": "Checkout",
-        "shops": "Shops",
-        "addproduct": "Add Product"
-      }
-    },
-    "email": {
-      "text": "Email",
-      "list": {
-        "inbox": "Inbox",
-        "reademail": "Read Email"
-      }
-    },
-    "kanban": {
-      "text": "Kanban Board"
-    },
-    "pages": {
-      "text": "Pages"
-    },
-    "authentication": {
-      "text": "Authentication",
-      "list": {
-        "login": "Login",
-        "register": "Register",
-        "recoverpwd": "Recover Password",
-        "lockscreen": "Lock screen"
-      }
-    },
-    "utility": {
-      "text": "Utility",
-      "list": {
-        "starter": "Starter Page",
-        "maintenance": "Maintenance",
-        "comingsoon": "Coming Soon",
-        "timeline": "Timeline",
-        "faqs": "FAQs",
-        "pricing": "Pricing",
-        "error404": "Error 404",
-        "error500": "Error 500"
-      }
-    },
-    "components": {
-      "text": "Components"
-    },
-    "uielements": {
-      "text": "UI Elements",
-      "list": {
-        "alerts": "Alerts",
-        "buttons": "Buttons",
-        "cards": "Cards",
-        "carousel": "Carousel",
-        "dropdowns": "Dropdowns",
-        "grid": "Grid",
-        "images": "Images",
-        "modals": "Modals",
-        "rangeslider": "Range Slider",
-        "progressbar": "Progress Bars",
-        "sweetalert": "Sweet Alert",
-        "tabs": "Tabs & Accordions",
-        "typography": "Typography",
-        "video": "Video",
-        "general": "General",
-        "lightbox": "Lightbox",
-        "sessiontimeout": "Session Timeout",
-        "rating": "Rating",
-        "notifications": "Notifications"
-      }
-    },
-    "forms": {
-      "text": "Forms",
-      "badge": "8",
-      "list": {
-        "elements": "Form Elements",
-        "validation": "Form Validation",
-        "advanced": "Form Advanced",
-        "editor": "Form Editor",
-        "fileupload": "Form File Upload",
-        "wizard": "Form Wizard",
-        "mask": "Form Mask"
-      }
-    },
-    "tables": {
-      "text": "Tables",
-      "list": {
-        "basic": "Basic Tables",
-        "advanced": "Advanced Table"
-      }
-    },
-    "charts": {
-      "text": "Charts",
-      "list": {
-        "apex": "Apex Chart",
-        "chartjs": "Chartjs Chart",
-        "chartist": "Chartist Chart",
-        "echart": "E Chart"
-      }
-    },
-    "icons": {
-      "text": "Icons",
-      "list": {
-        "remix": "Remix Icons",
-        "materialdesign": "Material Design",
-        "dripicons": "Dripicons",
-        "fontawesome": "Font Awesome 5"
-      }
-    },
-    "maps": {
-      "text": "Maps",
-      "list": {
-        "googlemap": "Google Maps",
-        "leaflet": "Leaflet Maps"
-      }
-    },
-    "multilevel": {
-      "text": "Multi Level",
-      "list": {
-        "level1": {
-          "1": "Level 1.1",
-          "2": "Level 1.2",
-          "level2": {
-            "1": "Level 2.1",
-            "2": "Level 2.2"
+      "menu": {
+          "text": "Menu"
+      },
+      "dashboard": {
+          "text": "Dashboard",
+          "badge": "3"
+      },
+      "documents":{
+          "text":"Documents",
+          "list":"List of documents",
+          "create":"Add a document "
+      },
+      "users":{
+          "text":"Users",
+          "list":"Users list",
+          "create":"Add user"
+      },
+      "layouts": {
+          "text": "Disposition",
+          "list": {
+              "horizontal": "Horizontal",
+              "lightsidebar": "Lightweight side bar",
+              "compactsidebar": "Compact side bar ",
+              "iconsidebar": "Icons sidebar",
+              "boxed": "Boxed layout",
+              "vertical": "Vertical",
+              "lighttopbar": "Lightweight top bar"
           }
-        }
       }
-    }
+  },
+  "pages": {
+      "documents":{
+          "title":"Documents"
+      },
+      "showdocument":{
+          "title":"Reading the document",
+          "description":"Extracting the contents of the document ...",
+          "placeholder":"The content of the document will be injected automatically",
+          "download":"Download content",
+          "radioplaceholder":"Choose the extension for the downloaded file"
+      },
+      "adddocument":{
+          "title":"Add a document",
+          "description":"To add a new document please fill in the fields below",
+          "button":"Create the document"
+      },
+      "editdocument":{
+          "title":"Edit a document"
+      },
+      "login":{
+          "title":"To log in",
+          "description":"To log in, please enter your details and press Login",
+          "registermessage":"Did you create an account ?"
+      },
+      "users":{
+          "title":"Users"
+      },
+      "adduser":{
+          "title":"Add user",
+          "description":"To add a new user please fill in the fields below",
+          "button":"Create a user"
+      },
+      "edituser":{
+          "title":"Modify a user",
+          "description":"To modify user information please fill in the fields below"
+      }
+  },
+  "tables": {
+      "documents":{
+          "name":"Name",
+          "title":"Documents",
+          "type":"Type",
+          "status":"Statuts",
+          "language":"Language",
+          "date":"Added the",
+          "extract":"Extract content",
+          "showdocuments":"View the documents",
+          "show":"Show",
+          "edit":"Edit",
+          "delete":"Delete"
+      },
+      "users":{
+          "title":"Users",
+          "name":"Last name and first name",
+          "email":"Email",
+          "role":"Role",
+          "created":"Registered on"
+      }
+  },
+  "forms": {
+      "documents":{
+          "type": "Document type",
+          "typeOptions":{
+              "invoice":"Invoice",
+              "bankstatement":"Bank statement",
+              "workcertificate":"Work certificate",
+              "other":"Other"
+          },
+          "status":"Statuts",
+          "statusOptions":{
+              "pending":"Pending",
+              "approved":"Approved",
+              "declined":"Declined"
+          },
+          "document":"Document",
+          "documentPlaceholder":"Choose a document",
+          "language":"Language",
+          "languageOptions":{
+              "eng":"English",
+              "fra":"French"
+          }
+      },
+      "login":{
+          "email":{
+              "text":"Email",
+              "placeholder":"Please enter your email"
+          },
+          "password":{
+              "text":"Password",
+              "placeholder":"Enter your password"
+          },
+          "button":"Connexion"
+      },
+      "users":{
+          "name":"Last name and first name",
+          "email":"Email",
+          "password":"Password",
+          "role":"Role",
+          "roleOptions":{
+              "user":"User",
+              "admin":"Admin"
+          }
+      }
+  },
+  "stats":{
+      "documents":{
+          "total": "Total number",
+          "pending": "Pending",
+          "rejected": "Rejected",
+          "approved": "Approved",
+          "previous": "At the previous time"
+      }
   }
 }

@@ -111,7 +111,7 @@ export default [
         path: '/users/',
         name: 'users',
         meta: {
-            authRequired: true,
+            adminRequired: true,
         },
         component: () => import('../views/pages/dashboard/users/index'),
     },
@@ -119,7 +119,7 @@ export default [
         path: '/users/create',
         name: 'create-user',
         meta: {
-            authRequired: true,
+            adminRequired: true,
         },
         component: () => import('../views/pages/dashboard/users/create'),
     },
@@ -127,7 +127,7 @@ export default [
         path: '/users/:id',
         name: 'user',
         meta: {
-            authRequired: true,
+            adminRequired: true,
         },
         component: () => import('../views/pages/dashboard/users/show'),
     },
@@ -135,7 +135,7 @@ export default [
         path:'/users/:id/edit',
         name:'edit-user',
         meta: {
-            authRequired: true,
+            adminRequired: true,
         },
         component: () => import('../views/pages/dashboard/users/edit'),
     },
@@ -143,7 +143,7 @@ export default [
         path:'/users/:id/documents',
         name:'user-documents',
         meta: {
-            authRequired: true,
+            adminRequired: true,
         },
         component: () => import('../views/pages/dashboard/userdocuments/index'),
     },
@@ -151,7 +151,7 @@ export default [
         path:'/users/:userID/documents/:documentID',
         name:'read-user-document',
         meta: {
-            authRequired: true,
+            adminRequired: true,
         },
         component: () => import('../views/pages/dashboard/userdocuments/show'),
     }
