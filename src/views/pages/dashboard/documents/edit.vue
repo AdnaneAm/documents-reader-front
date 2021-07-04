@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.editdocument.title',
+        title: this.$t( 'pages.editdocument.title'),
         documentID:this.$route.params.id
       }
     },
@@ -69,7 +69,24 @@
                   text:this.$t('forms.documents.typeOptions.other')
                 },
               ]
-            }
+            },
+            {
+              id:'language',
+              key:'language',
+              label:'forms.documents.language',
+              labelFor:'language',
+              type:'select',
+              options:[
+                {
+                  value:'eng',
+                  text:this.$t('forms.documents.languageOptions.eng')
+                },
+                {
+                  value:'fra',
+                  text:this.$t('forms.documents.languageOptions.fra')
+                },
+              ]
+            },
           ]
         }
       }

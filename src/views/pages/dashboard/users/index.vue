@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.users.title',
+        title: this.$t('pages.users.title'),
       }
     },
     computed:{

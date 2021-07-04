@@ -124,6 +124,11 @@
         "documents":{
             "title":"Documents"
         },
+        "showdocument":{
+            "title":"Lecture du document",
+            "description":"Entrain d'extraire le contenu du document ...",
+            "placeholder":"Le contenu du document sera injecté automatiquement"
+        },
         "adddocument":{
             "title":"Ajouter un document",
             "description":"Pour ajouter un nouveau document veuillez remplir les champs ci-dessous",
@@ -156,9 +161,16 @@
             "title":"Documents",
             "type":"Type",
             "status":"Statut",
-            "date":"Ajouté le"
+            "language":"Language",
+            "date":"Ajouté le",
+            "extract":"Extraire le contenu",
+            "showdocuments":"Afficher les documents",
+            "show":"Afficher",
+            "edit":"Modifier",
+            "delete":"Supprimer"
         },
         "users":{
+            "title":"Utilisateurs",
             "name":"Nom et prénom",
             "email":"Email",
             "role":"Role",
@@ -181,7 +193,12 @@
                 "declined":"Refusé"
             },
             "document":"Document",
-            "documentPlaceholder":"Veuillez choisir un document"
+            "documentPlaceholder":"Veuillez choisir un document",
+            "language":"Language",
+            "languageOptions":{
+                "eng":"Anglais",
+                "fra":"Français"
+            }
         },
         "login":{
             "email":{

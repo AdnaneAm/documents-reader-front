@@ -49,6 +49,7 @@ export const actions = {
     const document = new FormData();
     document.append("document", payload.document);
     document.append("type", payload.type);
+    document.append("language", payload.language);
     return await axios.post(process.env.VUE_APP_API_BASE_URL+`documents/`,document,{
       headers:authHeader()
     }).then(() => {

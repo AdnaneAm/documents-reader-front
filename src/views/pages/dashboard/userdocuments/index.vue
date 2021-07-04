@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.documents.title',
+        title: this.$t( 'pages.documents.title'),
         userID: this.$route.params.id
       }
     },
@@ -36,6 +36,7 @@
       fields(){
         return [
           {key: "name", sortable: true, label:this.$t('tables.documents.name')},
+          {key: "language", sortable: true, label:this.$t('tables.documents.language')},
           { key: "type", sortable: true, label:this.$t('tables.documents.type')},
           { key: "status", sortable: true, label:this.$t('tables.documents.status')},
           { key: "created", sortable: true, label:this.$t('tables.documents.date')},

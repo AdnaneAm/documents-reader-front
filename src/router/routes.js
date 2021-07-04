@@ -146,5 +146,13 @@ export default [
             authRequired: true,
         },
         component: () => import('../views/pages/dashboard/userdocuments/index'),
+    },
+    {
+        path:'/users/:userID/documents/:documentID',
+        name:'read-user-document',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/userdocuments/show'),
     }
 ]

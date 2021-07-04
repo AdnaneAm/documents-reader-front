@@ -45,15 +45,13 @@ export const mutations = {
     })
   },
   updateUserDocument(state,payload){
-    state.users.forEach(user => {
+    state.users = state.users.map(user => {
       if(user.id == payload.id){
-        user.documents.forEach(doc => {
-          if(doc.id == payload.documentID){
-            doc = payload.newdoc
-          }
-        })
+        const index = user.documents.findIndex(doc => doc.id == payload.documentID);
+        user.documents[index] = payload.newdoc;
       }
-    })
+      return user;
+    });
   }
 
 };
@@ -113,11 +111,18 @@ export const actions = {
     return await axios.patch(process.env.VUE_APP_API_BASE_URL+`users/${payload.userID}/documents/${payload.documentID}`,{status:payload.status},{
       headers:authHeader()
     }).then(res => {
-      commit('updatetUserDocument',{
+      commit('updateUserDocument',{
         id:payload.userID,
         documentID:payload.documentID,
         newdoc:res.data
       });
+    })
+  },
+  async readUserDocument(context, payload){
+    return await axios.get(process.env.VUE_APP_API_BASE_URL+`users/${payload.userID}/documents/${payload.documentID}/read`,{
+      headers:authHeader()
+    }).then(res => {
+        return Promise.resolve(res.data);
     })
   },
 };

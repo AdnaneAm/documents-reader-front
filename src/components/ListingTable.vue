@@ -41,12 +41,23 @@
         > 
           <template v-slot:cell(action)="row">
             <router-link
+              v-if="userRole == 'admin' && row.item.status == 'approved'"
+              class="text-dark mr-2"
+              v-b-tooltip.hover
+              data-toggle="tooltip"
+              :title="$t('tables.documents.extract')"
+              :to="{name:'read-user-document',params:{userID:options.userID, documentID: row.item.id}}"
+            >
+              <i class="ri-qr-scan-line font-size-18"></i>
+            </router-link>
+            <span v-if="resultIsLoading">Loading</span>
+            <router-link
               v-if="userRole == 'admin' && row.item.email"
               :to="{name:'user-documents',params:{id:row.item.id}}"
               class="text-primary mr-2"
               v-b-tooltip.hover
               data-toggle="tooltip"
-              title="Show documents"
+              :title="$t('tables.documents.showdocuments')"
             >
               <i class="ri-attachment-line font-size-18"></i>
             </router-link>
@@ -56,7 +67,7 @@
             target="_blank" 
             v-b-tooltip.hover
             data-toggle="tooltip"
-            title="Show"
+            :title="$t('tables.documents.show')"
             :href="`http://localhost:3000/${row.item.path.substr(7)}`">
               <i class="ri-eye-line font-size-18"></i>
             </a>
@@ -65,11 +76,17 @@
               class="mr-2 text-secondary"
               v-b-tooltip.hover
               data-toggle="tooltip"
-              title="Edit"
+              :title="$t('tables.documents.edit')"
             >
             <i class="ri-edit-line font-size-18"></i>
             </router-link>
-            <a @click="deleteRow(row.item.id)" href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
+            <a 
+              @click="deleteRow(row.item.id)" 
+              href="javascript:void(0);" 
+              class="text-danger" 
+              v-b-tooltip.hover 
+              :title="$t('tables.documents.delete')"
+            >
               <i class="ri-delete-bin-line font-size-18"></i>
             </a>
           </template>
@@ -83,7 +100,8 @@
             {{ $t(`forms.users.roleOptions.${data.value}`) }}
           </template>
           <template #cell(approve)="data">
-            <a 
+            <a
+              v-if="data.item.status != 'approved'"
               @click.prevent="changeStatus({status:'approved',documentID:data.item.id})"
               class="mr-2 text-success"
               v-b-tooltip.hover
@@ -101,6 +119,9 @@
             >      
               <i class="ri-close-fill font-size-18"></i>   
             </a>
+          </template>
+          <template #cell(language)="data">
+            {{$t(`forms.documents.languageOptions.${data.value}`)}}
           </template>
         </b-table>
       </div>
@@ -144,7 +165,8 @@
       filterOn: [],
       sortBy: "id",
       sortDesc: false,
-      userRole: 'user'
+      userRole: 'user',
+      resultIsLoading: false,
     };
   },
   computed: {
@@ -187,9 +209,9 @@
         this.$store.dispatch(this.options.deleteActionName,rowId);
       }
     },
-    changeStatus(payload){
+    async changeStatus(payload){
       payload.userID = this.options.userID;
-      this.$store.dispatch('users/updateUserDocument', payload);
+      await this.$store.dispatch('users/updateUserDocument', payload);
     }
   }
   }

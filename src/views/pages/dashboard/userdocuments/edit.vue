@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.editdocument.title',
+        title: this.$t( 'pages.editdocument.title'),
         documentID:this.$route.params.id
       }
     },

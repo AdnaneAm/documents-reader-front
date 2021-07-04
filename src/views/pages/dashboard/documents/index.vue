@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.documents.title',
+        title: this.$t( 'pages.documents.title'),
       }
     },
     computed:{

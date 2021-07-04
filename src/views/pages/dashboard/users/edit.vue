@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.edituser.title',
+        title: this.$t( 'pages.edituser.title'),
         userID:this.$route.params.id
       }
     },

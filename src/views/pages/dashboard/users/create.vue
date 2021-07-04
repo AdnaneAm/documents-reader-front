@@ -17,7 +17,7 @@
     },
     data() {
       return {
-        title: 'pages.adduser.title',
+        title: this.$t( 'pages.adduser.title'),
       }
     },
     computed:{
@@ -40,40 +40,49 @@
           createItemButton:'pages.adduser.button',
           redirectRouteName:'users',
           initialItem:{
-            type:'',
+            name:'',
+            email:'',
+            password:'',
+            role:'',
           },
           formFields:[
             {
-              id:'type',
-              key:'type',
-              label:'forms.users.type',
+              id:'name',
+              key:'name',
+              label:'forms.users.name',
+              labelFor:'name',
+              type:'text',
+            },
+            {
+              id:'email',
+              key:'email',
+              label:'forms.users.email',
+              labelFor:'email',
+              type:'text',
+            },
+            {
+              id:'password',
+              key:'password',
+              label:'forms.users.password',
+              labelFor:'password',
+              type:'password'
+            },
+            {
+              id:'role',
+              key:'role',
+              label:'forms.users.role',
               labelFor:'type',
               type:'select',
               options:[
                 {
-                  value:'facture',
-                  text:this.$t('forms.users.typeOptions.invoice')
+                  value:'admin',
+                  text:this.$t('forms.users.roleOptions.admin')
                 },
                 {
-                  value:'relevé bancaire',
-                  text:this.$t('forms.users.typeOptions.bankstatement')
-                },
-                {
-                  value:'relevé bancaire',
-                  text:this.$t('forms.users.typeOptions.workcertificate')
-                },
-                {
-                  value:'autres',
-                  text:this.$t('forms.users.typeOptions.other')
-                },
+                  value:'user',
+                  text:this.$t('forms.users.roleOptions.user')
+                }
               ]
-            },
-            {
-              id:'user',
-              key:'user',
-              label:'forms.users.user',
-              labelFor:'user',
-              type:'file'
             }
           ]
         }
