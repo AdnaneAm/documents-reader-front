@@ -127,7 +127,9 @@
         "showdocument":{
             "title":"Lecture du document",
             "description":"Entrain d'extraire le contenu du document ...",
-            "placeholder":"Le contenu du document sera injecté automatiquement"
+            "placeholder":"Le contenu du document sera injecté automatiquement",
+            "download":"Télécharger le contenu",
+            "radioplaceholder":"Veuillez choisir l'extension pour le fichier téléchargé"
         },
         "adddocument":{
             "title":"Ajouter un document",
@@ -220,6 +222,15 @@
                 "user":"Utilisateur",
                 "admin":"Administrateur"
             }
+        }
+    },
+    "stats":{
+        "documents":{
+            "total": "Nombre total",
+            "pending": "En attente",
+            "rejected": "Refusés",
+            "approved": "Approuvés",
+            "previous": "A la précédente fois"
         }
     }
 }

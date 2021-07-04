@@ -11,6 +11,10 @@ export const getters = {
   },
   document:(state) => (id) =>{
     return state.documents.filter(document => document.id == id)[0];
+  },
+  documentsCount:(state) => (status) => {
+    if(status=='all') return state.documents.length;
+    return state.documents.filter(document => document.status == status).length;
   }
 }
 export const mutations = {

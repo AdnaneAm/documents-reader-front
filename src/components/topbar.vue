@@ -149,6 +149,7 @@ export default {
         >
           <template v-slot:button-content>
             <img
+              :src="require('@/assets/images/avatar.jpeg')"
               class="rounded-circle header-profile-user"
               alt="Header Avatar"
             />

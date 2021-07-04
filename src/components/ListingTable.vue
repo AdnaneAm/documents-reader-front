@@ -41,7 +41,7 @@
         > 
           <template v-slot:cell(action)="row">
             <router-link
-              v-if="userRole == 'admin' && row.item.status == 'approved'"
+              v-if="userRole == 'admin' && row.item.status == 'approved' && row.item.path.split('.')[1] != 'pdf'"
               class="text-dark mr-2"
               v-b-tooltip.hover
               data-toggle="tooltip"

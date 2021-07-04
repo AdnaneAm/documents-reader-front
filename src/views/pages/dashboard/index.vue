@@ -1,24 +1,30 @@
+<template>
+  <Layout>
+    <PageHeader :title="title" :items="items" />
+    <GeneralStats />
+  </Layout>
+</template>
+
+
 <script>
 import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
-
-/**
- * Dashboard component
- */
+import GeneralStats from "@/components/GeneralStats";
 export default {
   components: {
     Layout,
     PageHeader,
+    GeneralStats,
   },
   data() {
     return {
-      title: "Dashboard",
+      title: "Tableau de bord",
       items: [
         {
-          text: "Nazox"
+          text: "Documents reader"
         },
         {
-          text: "Dashboard",
+          text: "Tableau de bord",
           active: true
         }
       ]
@@ -26,9 +32,3 @@ export default {
   }
 };
 </script>
-
-<template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
-  </Layout>
-</template>
